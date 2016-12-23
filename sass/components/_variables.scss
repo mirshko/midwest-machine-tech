@@ -40,8 +40,11 @@ $secondary-color: color("yellow", "base") !default;
 
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: color("yellow", "base") !default;
 
+$link-color: color("yellow", "base") !default;
+$link-hover-color: lighten($link-color, 5%) !default;
+
+// MOVED THIS FROM THE TYPOGRAPHY SECTION
 $off-black: rgba(0, 0, 0, 0.87) !default;
 
 
@@ -218,8 +221,8 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 // 13. Navigation Bar
 // ==========================================================================
 
-$navbar-height: 64px !default;
-$navbar-height-mobile: 56px !default;
+$navbar-height: 128px !default;
+$navbar-height-mobile: 72px !default;
 $navbar-font-size: 1rem !default;
 $navbar-font-color: #fff !default;
 $navbar-brand-font-size: 2.1rem !default;

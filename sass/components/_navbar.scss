@@ -8,7 +8,7 @@ nav {
   }
 
   color: $navbar-font-color;
-  @extend .z-depth-1;
+  // @extend .z-depth-1;
   background-color: $primary-color;
   width: 100%;
   height: $navbar-height-mobile;
@@ -58,6 +58,8 @@ nav {
     font-size: $navbar-brand-font-size;
     padding: 0;
     white-space: nowrap;
+
+	font-family: "Space Mono", sans-serif;
 
     &.center {
       left: 50%;

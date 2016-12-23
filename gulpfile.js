@@ -1,8 +1,9 @@
-var gulp = require('gulp');
+var gulp 		= require('gulp');
 var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
+var sass 		= require('gulp-sass');
+var uglify 		= require('gulp-uglify');
+var concat 		= require('gulp-concat');
+var surge 		= require('gulp-surge')
 
 // BROWSER-SYNC
 gulp.task('browser-sync', function() {
@@ -16,7 +17,7 @@ gulp.task('browser-sync', function() {
 // SERVE
 gulp.task('serve', ['sass', 'browser-sync'], function() {
     gulp.watch("./sass/**/*.scss", ['sass']);
-	gulp.watch("./js/**/*.js", ['scripts']);
+    gulp.watch("./js/**/*.js", ['scripts']);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
@@ -32,8 +33,24 @@ gulp.task('sass', function() {
 
 // CONCAT & UGLY JS
 gulp.task('scripts', function() {
-	return gulp.src('js/**/*.js')
-	    .pipe(concat('materialize.js'))
-		.pipe(uglify())
-	    .pipe(gulp.dest('./dist/'));
+    return gulp.src('./js/**/*.js')
+        .pipe(concat('materialize.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist'));
+});
+
+// DEPLOY TO SURGE.SH
+gulp.task('deploy-dev', [], function() {
+    return surge({
+        project: './', // PATH TO YOUR STATIC BUILD DIRECTORY
+        domain: 'midwest-machine-tech.surge.sh' // YOUR DOMAIN OR SURGE SUBDOMAIN
+    });
+});
+
+// DEPLOY TO SURGE.SH
+gulp.task('deploy', [], function() {
+    return surge({
+        project: './dist', // PATH TO YOUR STATIC BUILD DIRECTORY
+        domain: 'www.midwestmachinetech.com' // YOUR DOMAIN OR SURGE SUBDOMAIN
+    });
 });

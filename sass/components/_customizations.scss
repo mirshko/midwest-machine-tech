@@ -1,17 +1,30 @@
 html {
-	background-color: $primary-color;
+	background-color: lighten($primary-color, 1%);
 	color: #fff;
 
 	// OVERRIDE SELECTION CSS
 	::selection {
-		background: $link-color;
+		// background: darken($primary-color, 100%);
 	}
 	::-moz-selection {
-		background: $link-color;
+		// background: darken($primary-color, 100%);
 	}
 }
 
-a:not(.btn) {
+p > a:not(.btn, .brand-logo) {
 	padding-bottom: 2px;
 	border-bottom: 1px solid transparentize($link-color, .15);
+	transition: .2s ease-out;
+
+	&:hover {
+		color: $link-hover-color;
+		border-bottom: 1px solid transparentize($link-hover-color, .15);
+	}
+}
+
+// bg-image.js Customizations
+.bg-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }

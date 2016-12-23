@@ -56,7 +56,7 @@
 .btn,
 .btn-floating {
   &:focus {
-    background-color: darken($button-raised-background, 10%);
+    // background-color: darken($button-raised-background, 10%);
   }
 }
 
@@ -67,13 +67,13 @@
   background-color: $button-raised-background;
   text-align: center;
   letter-spacing: .5px;
-  @extend .z-depth-1;
+  // @extend .z-depth-1;
   transition: .2s ease-out;
   cursor: pointer;
 
   &:hover {
     background-color: $button-raised-background-hover;
-    @extend .z-depth-1-half;
+    // @extend .z-depth-1-half;
   }
 }
 
@@ -90,7 +90,7 @@
   padding: 0;
   background-color: $button-floating-background;
   border-radius: $button-floating-radius;
-  @extend .z-depth-1;
+  // @extend .z-depth-1;
   transition: .3s;
   cursor: pointer;
   vertical-align: middle;
@@ -106,7 +106,7 @@
 
   &:hover {
     background-color: $button-floating-background-hover;
-    @extend .z-depth-1-half;
+    // @extend .z-depth-1-half;
   }
 
   &:before {
