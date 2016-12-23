@@ -24,8 +24,12 @@ html{
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Space Mono", sans-serif;
-	font-weight: 400;
+	font-weight: normal;
 	line-height: 1.1;
+
+	&.standard {
+		font-family: "Roboto", sans-serif;
+	}
 }
 
 // Header Styles

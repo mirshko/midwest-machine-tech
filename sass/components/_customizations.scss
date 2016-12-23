@@ -1,6 +1,10 @@
 html {
-	background-color: lighten($primary-color, 1%);
 	color: #fff;
+	background-color: $primary-color;
+	// background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("http://unsplash.it/3840/2160?random");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
 
 	// OVERRIDE SELECTION CSS
 	::selection {
@@ -11,8 +15,8 @@ html {
 	}
 }
 
-p > a:not(.btn, .brand-logo) {
-	padding-bottom: 2px;
+p a:not(.btn, .brand-logo) {
+	padding-bottom: 1px;
 	border-bottom: 1px solid transparentize($link-color, .15);
 	transition: .2s ease-out;
 
@@ -22,7 +26,14 @@ p > a:not(.btn, .brand-logo) {
 	}
 }
 
-// bg-image.js Customizations
+img + p {
+	// I'M AN IMAGE CAPTION
+	color: transparentize(#fff, .3);
+	font-style: italic;
+	margin-top: calc(1em / 2);
+}
+
+// BG-IMAGE.JS CUSTOMIZATIONS
 .bg-image {
 	background-position: center;
 	background-repeat: no-repeat;

@@ -42,7 +42,7 @@ $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 
 $link-color: color("yellow", "base") !default;
-$link-hover-color: lighten($link-color, 5%) !default;
+$link-hover-color: lighten($link-color, 10%) !default;
 
 // MOVED THIS FROM THE TYPOGRAPHY SECTION
 $off-black: rgba(0, 0, 0, 0.87) !default;
@@ -71,7 +71,7 @@ $button-disabled-color: #9F9F9F !default;
 
 // Raised buttons
 $button-raised-background: $secondary-color !default;
-$button-raised-background-hover: lighten($button-raised-background, 5%) !default;
+$button-raised-background-hover: lighten($button-raised-background, 10%) !default;
 $button-raised-color: $off-black !default;
 
 // Large buttons
@@ -222,7 +222,7 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 // ==========================================================================
 
 $navbar-height: 128px !default;
-$navbar-height-mobile: 72px !default;
+$navbar-height-mobile: 80px !default;
 $navbar-font-size: 1rem !default;
 $navbar-font-color: #fff !default;
 $navbar-brand-font-size: 2.1rem !default;

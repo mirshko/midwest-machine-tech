@@ -39,7 +39,7 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./dist'));
 });
 
-// DEPLOY TO SURGE.SH
+// DEPLOY TO SURGE.SH FOR DEVELOPMENT
 gulp.task('deploy-dev', [], function() {
     return surge({
         project: './', // PATH TO YOUR STATIC BUILD DIRECTORY
