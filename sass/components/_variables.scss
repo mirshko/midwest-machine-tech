@@ -36,12 +36,12 @@ $primary-color: color("grey", "darken-4") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("yellow", "base") !default;
+$secondary-color: color("indigo", "accent-1") !default;
 
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 
-$link-color: color("yellow", "base") !default;
+$link-color: color("indigo", "accent-1") !default;
 $link-hover-color: lighten($link-color, 10%) !default;
 
 // MOVED THIS FROM THE TYPOGRAPHY SECTION
@@ -71,7 +71,7 @@ $button-disabled-color: #9F9F9F !default;
 
 // Raised buttons
 $button-raised-background: $secondary-color !default;
-$button-raised-background-hover: lighten($button-raised-background, 10%) !default;
+$button-raised-background-hover: lighten($button-raised-background, 5%) !default;
 $button-raised-color: $off-black !default;
 
 // Large buttons

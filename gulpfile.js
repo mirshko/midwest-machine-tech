@@ -50,7 +50,7 @@ gulp.task('deploy-dev', [], function() {
 // DEPLOY TO SURGE.SH
 gulp.task('deploy', [], function() {
     return surge({
-        project: './dist', // PATH TO YOUR STATIC BUILD DIRECTORY
+        project: './', // PATH TO YOUR STATIC BUILD DIRECTORY
         domain: 'www.midwestmachinetech.com' // YOUR DOMAIN OR SURGE SUBDOMAIN
     });
 });

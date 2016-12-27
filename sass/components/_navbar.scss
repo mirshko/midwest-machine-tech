@@ -9,8 +9,10 @@ nav {
 
   color: $navbar-font-color;
   // @extend .z-depth-1;
-  background-color: transparentize(darken($primary-color, 5%), 0.5);
+
+  background-color: transparentize(color("shades","black"), .5);
   -webkit-backdrop-filter: blur(10px);
+
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-height-mobile;
@@ -61,6 +63,7 @@ nav {
     white-space: nowrap;
 
 	font-family: "Space Mono", sans-serif;
+	font-weight: normal;
 
 	@media #{$small-and-down} {
 		font-size: ($navbar-brand-font-size / 1.6);
